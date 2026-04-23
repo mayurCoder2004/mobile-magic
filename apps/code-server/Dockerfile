@@ -13,5 +13,7 @@ USER coder
 # Expose code-server's default port
 EXPOSE 8080
 
+RUN mkdir -p /tmp/bolty-worker
+
 # Start code-server on container launch
 CMD ["code-server", "--auth", "none", "--bind-addr", "0.0.0.0:8080", "/tmp/bolty-worker"]
